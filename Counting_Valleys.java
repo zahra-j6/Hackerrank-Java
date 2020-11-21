@@ -35,12 +35,12 @@ public class Counting_Valleys {
                     s--;
                 if(arr[i]=='U' )
                     s++;
-                if(s==0 && val=='D') {
+                if(s==0 && val=='D') { // to ensure it is a valley
                     cnt++;
                     if(i+1<steps)
                         val=arr[i+1];
                 }
-                if(s==0 && i+1<steps)
+                if(s==0 && i+1<steps) // to check for mountain / valley
                     val=arr[i+1];
             }
             return cnt;
